@@ -1,0 +1,27 @@
+{
+  "name": "crud_produtos",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/LuizMarcelo96/crud_produtos#readme",
+  "bugs": {
+    "url": "https://github.com/LuizMarcelo96/crud_produtos/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuizMarcelo96/crud_produtos.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "sqlite3": "^5.1.7"
+  }
+}
