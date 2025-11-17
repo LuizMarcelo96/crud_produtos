@@ -1,15 +1,11 @@
-import { Router } from "express";
-import produtoRepository from "../repositories/produto.repository.js";
+import produtoController from "../controller/produto.controller.js";
+import {Router} from "express";
 
-const produtoRouters = Router();
+const produtoRouter = Router();
 
-produtoRouters.post("/produtos", async (req, res) => {
-    try {
-        const novoProduto = await produtoRepository.createProdutoRepository(req.body);
-        res.status(201).json(novoProduto);
-    } catch (error) {
-        res.status(400).json({ message: error.message });
-    }
-});
+produtoRouter.post("/produtos", produtoController.createProdutoController);
+produtoRouter.get("/produtos", produtoController.findAllProdutoController);
+produtoRouter.get("/produtos/:id", produtoController.findProdutoByIdController);
+produtoRouter.put("/produtos/:id", produtoController.updateProdutoController);
 
-export default produtoRouters;
+export default produtoRouter;
